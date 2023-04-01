@@ -1,12 +1,31 @@
 ## This API especially for test tech nutech powered by telkom Group
 
+```
+API RUNNING ON AMAZON EC2 INSTANCE
+```
+
 ![Amazon Web Services, Inc.](/server/public/images/amazon-dash.png)
 
+---
+
 ```
-!!!API RUNNING ON AMAZON EC2 INSTANCE!!!
+Tools
 ```
 
----
+| No  | Tools                         |
+| --- | ----------------------------- |
+| 1   | Amazon Web Service (Service)  |
+| 1   | Javascript (Backend)          |
+| 2   | NodeJS (Backend)              |
+| 3   | php (Frontend)                |
+| 3   | Bootstrap (Frontend)          |
+| 4   | expressJS (Backend)           |
+| 4   | jsonwebtoken (authentication) |
+| 5   | Postman (Backend)             |
+| 5   | MySQL (Database)              |
+| 5   | Multer (fileUpload)           |
+| 5   | bcrypt (authentication)       |
+| 5   | PM2 (autoServer)              |
 
 # USER-API
 
