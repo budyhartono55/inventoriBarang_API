@@ -1,6 +1,6 @@
 ## This API especially for test tech nutech powered by telkom Group
 
-![Amazon Web Services, Inc.](server/public/images/amazon.ong)
+![Amazon Web Services, Inc.](/server/public/images/amazon.png)
 
 ```
 !!!API RUNNING ON AMAZON EC2 INSTANCE!!!
