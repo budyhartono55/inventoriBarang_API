@@ -54,11 +54,13 @@ Tools
 upload Handler
 ```
 
-| Routes | EndPoint                                              | Description          |
-| ------ | ----------------------------------------------------- | -------------------- |
-| POST   | http://3.222.207.32:5050/api/test_nutech/upload/image | check API connection |
+| Routes | EndPoint                                              | Description                  |
+| ------ | ----------------------------------------------------- | ---------------------------- |
+| POST   | http://3.222.207.32:5050/api/test_nutech/upload/image | max 100kb && only .jpg, .png |
 
-## <Author "budyhartono55@gmail.com">
+```
+Author and Developer by "budyhartono55@gmail.com"
+```
 
 # How to run
 
