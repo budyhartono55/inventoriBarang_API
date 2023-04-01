@@ -22,10 +22,11 @@ Tools
 | 4   | expressJS (Backend)           |
 | 4   | jsonwebtoken (authentication) |
 | 5   | Postman (Backend)             |
-| 5   | MySQL (Database)              |
-| 5   | Multer (fileUpload)           |
-| 5   | bcrypt (authentication)       |
-| 5   | PM2 (autoServer)              |
+| 6   | MySQL (Database)              |
+| 7   | Multer (fileUpload)           |
+| 8   | bcrypt (authentication)       |
+| 9   | GIT (Version Control System)  |
+| 10  | PM2 (autoServer)              |
 
 # USER-API
 
