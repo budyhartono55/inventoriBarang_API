@@ -30,6 +30,12 @@
 | PUT    | http://3.222.207.32:5050/api/test_nutech/product/update/:id | update product by:id |
 | DELETE | http://3.222.207.32:5050/api/test_nutech/product/delete/:id | update product by:id |
 
+```upload
+| Routes | EndPoint                                                    | Description          |
+| ------ | ----------------------------------------------------------- | -------------------- |
+| POST    | http://3.222.207.32:5050/api/test_nutech/upload/image       | check API connection |
+```
+
 ## <Author "budyhartono55@gmail.com">
 
 # How to run
