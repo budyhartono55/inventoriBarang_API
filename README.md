@@ -1,6 +1,10 @@
-# API List
+## This API especially for test tech nutech powered by telkom Group
 
-## this API especially for test tech nutech powered by telkom Group
+```
+!!!API RUNNING ON AMAZON EC2 INSTANCE!!!
+```
+
+---
 
 # USER-API
 
@@ -19,7 +23,7 @@
 | Routes | EndPoint                                                    | Description          |
 | ------ | ----------------------------------------------------------- | -------------------- |
 | GET    | http://3.222.207.32:5050/                                   | check API connection |
-| POST   | http://3.222.207.32:5050/api/test_nutech/product/add        | register             |
+| POST   | http://3.222.207.32:5050/api/test_nutech/product/add        | add product          |
 | GET    | http://3.222.207.32:5050/api/test_nutech/product/get_all    | get all products     |
 | PUT    | http://3.222.207.32:5050/api/test_nutech/product/update/:id | update product by:id |
 | DELETE | http://3.222.207.32:5050/api/test_nutech/product/delete/:id | update product by:id |
