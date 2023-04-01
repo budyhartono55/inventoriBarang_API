@@ -7,9 +7,21 @@ const routes = {};
 
 // routes collections ==================
 //register
+const pool = require("../config/database");
+
 routes.add_product = async (req, res) => {
   const { body } = req;
+
   try {
+    const [rows] = await pool.query("SELECT * FROM products WHERE nama_barang = ?", [body.nama_barang]);
+
+    if (rows.length > 0) {
+      return res.status(400).json({
+        status_text: "Bad Request",
+        message: "Nama Barang yang anda masukkan sudah tersedia, silahkan update stok!",
+      });
+    }
+
     await query_addProduct(body);
     res.status(200).json({
       status_text: "OK",

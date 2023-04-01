@@ -8,6 +8,9 @@ const storage = multer.diskStorage({
   filename: (req, file, cb) => {
     const timestamp = new Date().getTime();
     console.log(file);
+    if (!file.originalname.match(/\.(jpg|png)$/)) {
+      return cb(new Error("Hanya menerima file dengan ekstensi .jpg dan .png"));
+    }
     const original_name = file.originalname;
     // const extension = path.extname(file.originalname);
 
@@ -17,9 +20,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
-  limits: {
-    fileSize: 3 * 1000 * 10000, //3MB
-  },
+  limits: { fileSize: 100000 }, // Maksimal ukuran file 100 KB
 });
+
+// const upload = multer({
+//   storage: storage,
+//   limits: {
+//     fileSize: 10000, //3MB
+//   },
+// });
 
 module.exports = upload;
