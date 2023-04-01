@@ -52,6 +52,6 @@ app.use((err, req, res, next) => {
 });
 
 // LISTEN ME =======================
-app.listen(PORT, () => {
-  console.log(`Server Running on PORT ${PORT}`);
+app.listen(5050, () => {
+  console.log(`Server Running on PORT PM2`);
 });
