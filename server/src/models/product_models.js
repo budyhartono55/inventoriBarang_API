@@ -11,6 +11,14 @@ models.query_get_allProducts = () => {
   return db_pool.execute(SQL_query);
 };
 
+models.query_get_productById = (id_product) => {
+  const SQL_query = ` SELECT * FROM products 
+                      WHERE id = ${id_product};`;
+  db_pool.execute(SQL_query);
+
+  return db_pool.execute(SQL_query);
+};
+
 models.query_addProduct = (body) => {
   const SQL_query = ` INSERT INTO products (nama_barang, harga_beli, harga_jual, stok, gambar) 
                       VALUES ("${body.nama_barang}", "${body.harga_beli}", "${body.harga_jual}", "${body.stok}", "${body.gambar}")`;

@@ -29,7 +29,7 @@ app.use("/api/test_nutech", user_routes, product_routes);
 app.get("/", (req, res) => {
   res.status(200).json({
     status_text: "OK",
-    message: "Yeaay!, your connected with nutech Inventories API",
+    message: "Yeaay!, you're connected with nutech Inventories API",
   });
 });
 
@@ -52,6 +52,6 @@ app.use((err, req, res, next) => {
 });
 
 // LISTEN ME =======================
-app.listen(5050, () => {
-  console.log(`Server Running on PORT PM2`);
+app.listen(PORT || 5050, () => {
+  console.log(`Server Running on auto server PORT in PM2`);
 });

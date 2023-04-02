@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 require("dotenv").config();
-const { query_get_allProducts, query_addProduct, query_updateProduct, query_deleteProduct } = require("../models/product_models");
+const { query_get_allProducts, query_addProduct, query_updateProduct, query_deleteProduct, query_get_productById } = require("../models/product_models");
 
 // routes bucket
 const routes = {};
@@ -49,7 +49,7 @@ routes.get_allProducts = async (req, res) => {
       status_text: "OK",
       message: "Get all products Successfully",
       data: {
-        products_details: data,
+        product_details: data,
       },
     });
     console.log(data);
@@ -60,6 +60,28 @@ routes.get_allProducts = async (req, res) => {
     });
   }
 };
+
+// get Prodct byID
+routes.get_productById = async (req, res) => {
+  const { id_product } = req.params;
+  try {
+    const [data] = await query_get_productById(id_product);
+    res.status(200).json({
+      statusText: "Success",
+      message: `Successfully get product with Id : ${id_product}`,
+      data: {
+        product_details: data,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({
+      statusText: "Internal Server Error",
+      message: `Sorry, we failed to find your requested ID`,
+      Error: err,
+    });
+  }
+};
+
 // update_product
 routes.update_product = async (req, res) => {
   const { id_product } = req.params;

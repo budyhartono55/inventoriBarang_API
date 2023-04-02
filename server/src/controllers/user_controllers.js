@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 require("dotenv").config();
-const { query_get_allUsers, query_addUser, query_updateUser, query_deleteUser } = require("../models/user_models");
+const { query_get_allUsers, query_addUser, query_updateUser, query_deleteUser, query_get_userById } = require("../models/user_models");
 
 // routes bucket
 const routes = {};
@@ -38,7 +38,6 @@ routes.get_allUsers = async (req, res) => {
         user_details: data,
       },
     });
-    console.log(data);
   } catch (err) {
     res.status(500).json({
       status_text: "Internal Server Error",
@@ -46,6 +45,27 @@ routes.get_allUsers = async (req, res) => {
     });
   }
 };
+
+routes.get_userById = async (req, res) => {
+  const { id_user } = req.params;
+  try {
+    const [data] = await query_get_userById(id_user);
+    res.status(200).json({
+      statusText: "Success",
+      message: `Successfully get user with Id : ${id_user}`,
+      data: {
+        user_details: data,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({
+      statusText: "Internal Server Error",
+      message: `Sorry, we failed to find your requested ID`,
+      Error: err,
+    });
+  }
+};
+
 // update_user
 routes.update_user = async (req, res) => {
   const { id_user } = req.params;

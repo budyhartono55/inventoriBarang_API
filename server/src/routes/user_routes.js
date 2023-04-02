@@ -1,6 +1,6 @@
 // import express
 const express = require("express");
-const { check, add_user, get_allUsers, update_user, delete_user } = require("../controllers/user_controllers"); //import path
+const { check, add_user, get_allUsers, update_user, delete_user, get_userById } = require("../controllers/user_controllers"); //import path
 
 const router = express.Router(); //router function
 
@@ -10,6 +10,7 @@ router.post("/user/add", add_user);
 
 // GET ==========READ============
 router.get("/user/get_all", get_allUsers);
+router.get("/user/:id_user", get_userById);
 router.get("/global/check", check);
 
 //PUT ==========UPDATE============

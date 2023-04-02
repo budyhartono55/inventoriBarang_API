@@ -20,6 +20,7 @@ Tools
 | 3   | php (Frontend)                |
 | 3   | Bootstrap (Frontend)          |
 | 4   | expressJS (Backend)           |
+| 4   | Codeigniter (Backend)         |
 | 4   | jsonwebtoken (authentication) |
 | 5   | Postman (Backend)             |
 | 6   | MySQL (Database)              |
@@ -35,8 +36,9 @@ Tools
 | GET    | http://3.222.207.32:5050/                                | check API connection |
 | POST   | http://3.222.207.32:5050/api/test_nutech/user/add        | register             |
 | GET    | http://3.222.207.32:5050/api/test_nutech/user/get_all    | get all users        |
+| GET    | http://3.222.207.32:5050/user/:id                        | get user by by:id    |
 | PUT    | http://3.222.207.32:5050/api/test_nutech/user/update/:id | update user by:id    |
-| DELETE | http://3.222.207.32:5050/api/test_nutech/user/delete/:id | update user by:id    |
+| DELETE | http://3.222.207.32:5050/api/test_nutech/user/delete/:id | delete user by:id    |
 
 ---
 
@@ -47,8 +49,9 @@ Tools
 | GET    | http://3.222.207.32:5050/                                   | check API connection |
 | POST   | http://3.222.207.32:5050/api/test_nutech/product/add        | add product          |
 | GET    | http://3.222.207.32:5050/api/test_nutech/product/get_all    | get all products     |
+| GET    | http://3.222.207.32:5050/product/:id                        | get product by by:id |
 | PUT    | http://3.222.207.32:5050/api/test_nutech/product/update/:id | update product by:id |
-| DELETE | http://3.222.207.32:5050/api/test_nutech/product/delete/:id | update product by:id |
+| DELETE | http://3.222.207.32:5050/api/test_nutech/product/delete/:id | delete product by:id |
 
 ```
 upload Handler

@@ -9,6 +9,14 @@ models.query_get_allUsers = () => {
   return db_pool.execute(SQL_query);
 };
 
+models.query_get_userById = (id_user) => {
+  const SQL_query = ` SELECT * FROM users 
+                      WHERE id = ${id_user};`;
+  db_pool.execute(SQL_query);
+
+  return db_pool.execute(SQL_query);
+};
+
 models.query_addUser = (body) => {
   const SQL_query = ` INSERT INTO users (nama, email, password) 
                       VALUES ("${body.nama}", "${body.email}", "${body.password}")`;
