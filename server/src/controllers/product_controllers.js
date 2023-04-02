@@ -52,7 +52,6 @@ routes.get_allProducts = async (req, res) => {
         product_details: data,
       },
     });
-    console.log(data);
   } catch (err) {
     res.status(500).json({
       status_text: "Internal Server Error",
