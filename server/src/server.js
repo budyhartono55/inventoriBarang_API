@@ -42,7 +42,6 @@ app.all("*", (req, res) => {
 });
 
 // ENV collection
-const PORT = process.env.PORT;
 
 // ERROR Handling
 app.use((err, req, res, next) => {
@@ -52,6 +51,6 @@ app.use((err, req, res, next) => {
 });
 
 // LISTEN ME =======================
-app.listen(PORT || 5050, () => {
+app.listen(5050, () => {
   console.log(`Server Running on auto server PORT in PM2`);
 });
